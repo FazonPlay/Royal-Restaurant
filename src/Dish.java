@@ -100,4 +100,3 @@ public class Dish {
 //    }
 }
 
-// EVERYTHINH HAS TO BE SYSOUT NOT RETURN TYPE CUZ CIRIL IS A BITCH
