@@ -32,14 +32,23 @@ public class Menu {
         }
     }
 
+    @Override
+    public String toString() {
+        return "Menu{" +
+                "idMenu=" + idMenu +
+                ", name='" + name + '\'' +
+                ", creationDate=" + creationDate +
+                ", menuType='" + menuType + '\'' +
+                ", dishes=" + dishes +
+                '}';
+    }
+
 //    @Override
-//    public String toString() {
-//        return "Menu{" +
-//                "idMenu=" + idMenu +
-//                ", name='" + name + '\'' +
-//                ", creationDate=" + creationDate +
-//                ", menuType='" + menuType + '\'' +
-//                ", dishes=" + dishes +
-//                '}';
+//    public void printMenu(){
+//        System.out.println("Menu ID: "+idMenu);
+//        System.out.println("Menu Name: "+name);
+//        for (Dish dish : availableDishes) {
+//            System.out.println(dish);
+//        }
 //    }
 }

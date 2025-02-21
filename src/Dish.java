@@ -1,16 +1,21 @@
 import java.time.LocalTime;
 
 public class Dish {
-    private String name;
-    private String description;
-    private Double price;
-    private String calories;
-    private String category;
-    private String portionSize;
-    private LocalTime dateAdded;
-    private boolean availability;
+     String name;
+     String description;
+     double price;
+     String calories;
+     String category;
+     String portionSize;
+     LocalTime dateAdded;
+     boolean availability;
+     String ingredients;
+     int preparationTime;
+     double specialPrice;
+     String imageURL;
 
-    public Dish(String name, String description, Double price, String calories, String category, String portionSize, int dateAdded, boolean availability) {
+
+    public Dish(String name, String description, Double price, String calories, String category, String portionSize, int dateAdded, boolean availability, String ingredients, int preparationTime, double specialPrice, String imageURL) {
         this.name = name;
         this.description = description;
         this.price = price;
@@ -19,6 +24,10 @@ public class Dish {
         this.portionSize = portionSize;
         this.dateAdded = LocalTime.ofSecondOfDay(dateAdded);
         this.availability = availability;
+        this.ingredients = ingredients;
+        this.preparationTime = preparationTime;
+        this.specialPrice = specialPrice;
+        this.imageURL = imageURL;
     }
 
     public String getName() {
@@ -47,6 +56,22 @@ public class Dish {
 
     public LocalTime getDateAdded() {
         return dateAdded;
+    }
+
+    public String getIngredients() {
+        return ingredients;
+    }
+
+    public int getPreparationTime() {
+        return preparationTime;
+    }
+
+    public double getSpecialPrice() {
+        return specialPrice;
+    }
+
+    public String getImageURL() {
+        return imageURL;
     }
 
     public boolean getAvailability() {
@@ -85,19 +110,37 @@ public class Dish {
         this.availability = availability;
     }
 
-//    @Override
-//    public String toString() {
-//        return "Dish{" +
-//                "name='" + name + '\'' +
-//                ", description='" + description + '\'' +
-//                ", price=" + price +
-//                ", calories='" + calories + '\'' +
-//                ", category='" + category + '\'' +
-//                ", portionSize='" + portionSize + '\'' +
-//                ", dateAdded=" + dateAdded +
-//                ", availability=" + availability +
-//                '}';
-//    }
-}
+    public void setIngredients(String ingredients) {
+        this.ingredients = ingredients;
+    }
 
-// EVERYTHINH HAS TO BE SYSOUT NOT RETURN TYPE CUZ CIRIL IS A BITCH
+    public void setPreparationTime(int preparationTime) {
+        this.preparationTime = preparationTime;
+    }
+
+    public void setSpecialPrice(double specialPrice) {
+        this.specialPrice = specialPrice;
+    }
+
+    public void setImageURL(String imageURL) {
+        this.imageURL = imageURL;
+    }
+
+    @Override
+    public String toString() {
+        return "Dish{" +
+                "name='" + name + '\'' +
+                ", description='" + description + '\'' +
+                ", price=" + price +
+                ", calories='" + calories + '\'' +
+                ", category='" + category + '\'' +
+                ", portionSize='" + portionSize + '\'' +
+                ", dateAdded=" + dateAdded +
+                ", availability=" + availability +
+                ", ingredients='" + ingredients + '\'' +
+                ", preparationTime=" + preparationTime +
+                ", specialPrice=" + specialPrice +
+                ", imageURL='" + imageURL + '\'' +
+                '}';
+    }
+}
