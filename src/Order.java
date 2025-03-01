@@ -1,40 +1,39 @@
 import java.util.ArrayList;
 
 public class Order {
-
     private int orderNumber;
-    private String dishes;
-    ArrayList<Dish> dish = new ArrayList<>();
+    private ArrayList<Dish> dishes;
 
-    public Order(int orderNumber, String dishes) {
+    public Order(int orderNumber) {
         this.orderNumber = orderNumber;
-        this.dishes = dishes;
+        this.dishes = new ArrayList<>();
     }
 
-    public void String(Dish dish) {
-        this.dish.add(dish);
+    public void addDish(Dish dish) {
+        dishes.add(dish);
     }
 
-    public void calculateTotal() {
+    public double calculateTotal() {
         double total = 0;
-        for (Dish dish : dish) {
+        for (Dish dish : dishes) {
             total += dish.getPrice();
         }
-        System.out.println("Total: " + total);
+        return total;
     }
 
     public void showOrder() {
         System.out.println("Order number: " + orderNumber);
-        for (Dish dish : dish) {
+        for (Dish dish : dishes) {
             System.out.println(dish.getName() + " - " + dish.getPrice());
         }
+        System.out.println("Total: " + calculateTotal());
     }
 
     @Override
     public String toString() {
         return "Order{" +
                 "orderNumber=" + orderNumber +
-                ", dishes='" + dishes + '\'' +
+                ", dishes=" + dishes +
                 '}';
     }
 }

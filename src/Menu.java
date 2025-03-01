@@ -32,6 +32,25 @@ public class Menu {
         }
     }
 
+    public String getName() {
+        return name;
+    }
+
+    // Add getter for dishes
+    public ArrayList<Dish> getDishes() {
+        return dishes;
+    }
+
+    // Add getter for menuType
+    public String getMenuType() {
+        return menuType;
+    }
+
+    // Add getter for creationDate
+    public LocalDate getCreationDate() {
+        return creationDate;
+    }
+
     @Override
     public String toString() {
         return "Menu{" +
@@ -42,13 +61,4 @@ public class Menu {
                 ", dishes=" + dishes +
                 '}';
     }
-
-//    @Override
-//    public void printMenu(){
-//        System.out.println("Menu ID: "+idMenu);
-//        System.out.println("Menu Name: "+name);
-//        for (Dish dish : availableDishes) {
-//            System.out.println(dish);
-//        }
-//    }
 }
